@@ -5,6 +5,7 @@ import React,{useState} from "react";
 const Subscriptions = () => {
      const [data, setData] = useState({
         name:"",
+        email:"",
         pack:"",
         amount:""
      });
@@ -57,6 +58,18 @@ const Subscriptions = () => {
       </div>
       <div className="mb-3">
         <label htmlFor="email" className="form-label">
+          Email
+        </label>
+        <input
+          type="email"
+          className="form-control"
+          name="email"
+          value={data.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="pack" className="form-label">
           Pack
         </label>
         <input
