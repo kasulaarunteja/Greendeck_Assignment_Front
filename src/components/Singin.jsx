@@ -2,7 +2,7 @@
 import React from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom"
 
@@ -39,6 +39,11 @@ const Signin = ()  => {
         }).catch((err) => {
             console.log(err)
         })
+    }
+
+
+    const handleGoogleLogin = () => {
+
     }
 
 
@@ -93,9 +98,11 @@ const Signin = ()  => {
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
-              <button className="btn btn-primary ww-100 mb-4">
-                <span className="fa fa-google me-4">
-                </span> sing in with Google
+              <button className="btn btn-primary ww-100 mb-4" onClick={handleGoogleLogin}>
+                <span className="fa fa-google me-4"><a href="http://localhost:8080/auth/google">
+                sing in with Google
+                </a>
+                 </span> 
                 </button>
             </div>
           </div>

@@ -15,7 +15,7 @@ const Login = () => {
 
 
     if (login) {
-        navigate('/dashboard')
+        navigate('/home')
     }
 
     const [user, setUser] = useState({
@@ -42,7 +42,11 @@ const Login = () => {
             console.log(err)
         })
     }
+ 
 
+     const Google = () => {
+      window.open("http://localhost:8080/auth/google", "_self")
+     }
 
 
   return (
@@ -85,8 +89,9 @@ const Login = () => {
             <button type="submit" className="btn btn-primary"  onClick={handleClick}> 
               Submit
             </button>
-            <button className="btn btn-primary ww-100 mb-4">
+            <button className="btn btn-primary ww-100 mb-4" onClick={Google}>
                 <span className="fa fa-google me-4">
+                  {/* <a href="http://localhost:8080/auth/google"></a> */}
                 </span> sing in with Google
             </button>
           </div>
