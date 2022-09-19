@@ -32,7 +32,7 @@ const Signin = ()  => {
         e.preventDefault();
         console.log(user);
         setRegistered(false);
-        axios.post('http://localhost:8080/register', user).then((res) => {
+        axios.post('https://greendeckassignment1.herokuapp.com/register', user).then((res) => {
             console.log(res.data);
             alert("register successful")
             setRegistered(true)
@@ -42,9 +42,9 @@ const Signin = ()  => {
     }
 
 
-    const handleGoogleLogin = () => {
+    // const handleGoogleLogin = () => {
 
-    }
+    // }
 
 
     return (
@@ -98,8 +98,8 @@ const Signin = ()  => {
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
-              <button className="btn btn-primary ww-100 mb-4" onClick={handleGoogleLogin}>
-                <span className="fa fa-google me-4"><a href="http://localhost:8080/auth/google">
+              <button className="btn btn-primary ww-100 mb-4">
+                <span className="fa fa-google me-4"><a href="https://greendeckassignment1.herokuapp.com/auth/google">
                 sing in with Google
                 </a>
                  </span> 

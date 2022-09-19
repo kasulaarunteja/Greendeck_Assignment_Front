@@ -34,7 +34,10 @@ const Subscriptions = () => {
               },
               body: JSON.stringify(data),
             }
-          );
+            
+          ).then((res) => {
+            alert("filled ")
+          })
         } catch (error) {
           console.log(error);
         }

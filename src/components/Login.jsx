@@ -33,7 +33,7 @@ const Login = () => {
     const handleClick = (e) => {
         e.preventDefault();
         setLogin(false);
-        axios.post("http://localhost:8080/login", user)
+        axios.post("https://greendeckassignment1.herokuapp.com/login", user)
         .then((res) => {
             console.log(res.data);
             setLogin(true)
