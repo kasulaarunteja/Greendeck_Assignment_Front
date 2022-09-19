@@ -91,7 +91,7 @@ const Login = () => {
             </button>
             <button className="btn btn-primary ww-100 mb-4" onClick={Google}>
                 <span className="fa fa-google me-4">
-                  {/* <a href="http://localhost:8080/auth/google"></a> */}
+                <a href="https://greendeckassignment1.herokuapp.com/auth/google"></a>
                 </span> sing in with Google
             </button>
           </div>
